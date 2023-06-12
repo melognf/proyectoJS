@@ -287,8 +287,8 @@ nav {
 
 #sec_dos h4:hover {
     font-family: 'Sedgwick Ave', cursive;
-    color: #0034c4;
-    background-color: #96abc2;
+    color: #007fff;
+    background-color: #1f1e1e;
     transition: 0.5s ease-in;
     width: 200px;
     border-radius: 10px;
@@ -621,93 +621,60 @@ nav {
 
 
 
-/**********-- TECNOLOGIA  --****************/
+/**********-- VENTA Y JUEGOS  --****************/
 /******************************************/
 
-
-
-#dos_tecno {
-    background-color: #96abc2;
-    margin-top: 100px;
-}
-
-#dos_tecno h4 {
-    text-align: center;
-    padding: 50px;
-    font-family: 'Sedgwick Ave', cursive;
-    font-size: 3rem;
-}
-
-#dos_tecno .container .telef {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 50px;
-    background-color: #96abc2;
-}
-
-#dos_tecno .container .telef img {
-    width: 300px;
-    height: 200px;
-    border: 2px solid #1f1e1e;
-}
-
- #dos_tecno .container .telef p {
-    padding: 20px;
-    font-weight: bold;
-}
-
-#tres_tecno h6 {
-    font-size: 2.5rem;
-    padding: 80px;
-    font-family: 'Sedgwick Ave', cursive;
-}
-
-#tres_tecno iframe {
-    border: 15px solid #2d5e41;
-}
-
-#tres_tecno p {
-    background-color: #313030;
-    color: white;
-    padding: 45px;
-}
-
-#cuatro_tecno {
-    background-color: #96abc2;
-    margin: 50px 0 50px 0;
-}
-
-#cuatro_tecno h4 {
-    text-align: center;
-    padding: 50px;
-    font-family: 'Sedgwick Ave', cursive;
-    font-size: 3rem;
-}
-
-#cuatro_tecno img {
-    padding: 20px;
-}
-
-#cuatro_tecno p {
-    padding: 40px;
-    color: black;
-    font-weight: bold;
-}
-
-#cuatro_tecno .juegos {
+.carrito {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    align-items: center;
 }
 
-#cuatro_tecno .juegos img {
-    width: 300px;
+#contenedorCd {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-#cinco_tecno {
+.ventaCd {
+    padding: 50px;
+}
+
+.card h5 {
+    color: #f4f4f2;
+}
+
+.card p {
+    color: #009fff;
+}
+.ventanita {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    border: 10px solid black;
+}
+
+.ventanita img {
+    width: 25%;
+}
+
+.card .ventanita {
+    width: 200px;
+    height: 200px;
     margin-bottom: 50px;
 }
+
+.btnEliminar {
+    background-color: #47a15b;
+    width: 220px;
+    height: 50px;
+    border: 2px solid white;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+}
+    
+  
 
 
 /**********--  MULTIMEDIA  --**********/
