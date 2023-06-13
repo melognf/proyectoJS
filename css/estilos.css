@@ -673,7 +673,23 @@ nav {
     font-family: 'KoHo', sans-serif;
     font-weight: bold;
 }
+
+.combinado {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.tituloCarrito h3 {
+    margin-right: 200px;
+}
     
+.tituloCarrito img {
+    margin-bottom: 350px;
+}
+
+
+
   
 
 

@@ -84,7 +84,7 @@ discos.forEach((disco) => {
     <img src="${img}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${nombre}</h5>
-    <p class="card-text">Precio: ${precio}</p>
+    <p class="card-text">Precio: $ ${precio}</p>
     <p class="card-text">Descripcion: ${desc}</p>
     <p class="card-text">Cantidad: ${cantidad}</p>
     <button onclick="agregarProducto(${id})" class="btn btn-primary">Agregar al carrito</button>
@@ -123,8 +123,10 @@ function verCarrito() {
         <p>Precio: ${p.precio}</p>
         <p>Cantidad: ${p.cantidad}</p>
         <button id="${p.id}" class="btnEliminar">ELIMINAR</button>
-
         `
+        const flecha = document.getElementById('flechaAbajo');
+        flecha.style.marginBottom = '0';
+
         mostrar.appendChild(producto);
         producto.querySelector('button').addEventListener('click', ()=> {
             eliminarDelCarrito(index);
@@ -137,6 +139,8 @@ function eliminarDelCarrito(indice) {
 
     if(carrito[indice].cantidad === 0) {
         carrito.splice(indice, 1);
+        const flecha = document.getElementById('flechaAbajo');
+        flecha.style.marginBottom = '350px';
     }
 
     verCarrito();
