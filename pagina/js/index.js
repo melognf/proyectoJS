@@ -1,17 +1,9 @@
-document.addEventListener("DOMContentLoaded", cargaInicial);
-
-function cargaInicial() {
-    cargarCarritoLocalStorage();
-    verCarrito();
-}
-
-
-const discos = [
+const productos = [
     {
         id: 1,
         nombre: "Appetite for destruccion",
         cantidad: 1,
-        desc: "Disco de Guns N Roses",
+        desc: "Guns N Roses",
         precio: 15000,
         img: "img/cd1.jpg"
     },
@@ -19,7 +11,7 @@ const discos = [
         id: 2,
         nombre: "Nevermind",
         cantidad: 1,
-        desc: "Disco de Nirvana",
+        desc: "Nirvana",
         precio: 16000,
         img: "img/cd2.jpg"
     },
@@ -27,7 +19,7 @@ const discos = [
         id: 3,
         nombre: "Exile on main street",
         cantidad: 1,
-        desc: "Disco de The Rolling Stones",
+        desc: "The Rolling Stones",
         precio: 18000,
         img: "img/cd3.jpg"
     },
@@ -35,7 +27,7 @@ const discos = [
         id: 4,
         nombre: "Wandering Spirit",
         cantidad: 1,
-        desc: "Disco de Mick Jagger",
+        desc: "Mick Jagger",
         precio: 15000,
         img: "img/cd4.jpg"
     },
@@ -43,7 +35,7 @@ const discos = [
         id: 5,
         nombre: "Let it be",
         cantidad: 1,
-        desc: "Disco de The Beatles",
+        desc: "The Beatles",
         precio: 20000,
         img: "img/cd5.jpg"
     },
@@ -51,7 +43,7 @@ const discos = [
         id: 6,
         nombre: "On the night",
         cantidad: 1,
-        desc: "Disco de Dire Straits",
+        desc: "Dire Straits",
         precio: 19000,
         img: "img/cd6.jpg"
     },
@@ -59,7 +51,7 @@ const discos = [
         id: 7,
         nombre: "Never mind the bollocks",
         cantidad: 1,
-        desc: "Disco de Sex Pistols",
+        desc: "Sex Pistols",
         precio: 15000,
         img: "img/cd7.jpg"
     },
@@ -67,94 +59,105 @@ const discos = [
         id: 8,
         nombre: "Greatest Hits",
         cantidad: 1,
-        desc: "Disco de The Police",
+        desc: "The Police",
         precio: 16000,
         img: "img/cd8.jpg"
+    },
+    {
+        id: 9,
+        nombre: "Greatest Hits",
+        cantidad: 1,
+        desc: "Sumo",
+        precio: 17000,
+        img: "img/cd9.jpg"
+    },
+    {
+        id: 10,
+        nombre: "Palabras mas, palabras menos",
+        cantidad: 1,
+        desc: "Los Rodriguez",
+        precio: 18000,
+        img: "img/cd10.jpg"
+    },
+    {
+        id: 11,
+        nombre: "Dookie",
+        cantidad: 1,
+        desc: "Green day",
+        precio: 19000,
+        img: "img/cd11.jpg"
+    },
+    {
+        id: 12,
+        nombre: "La grasa de las capitales",
+        cantidad: 1,
+        desc: "Seru Giran",
+        precio: 20000,
+        img: "img/cd12.jpg"
     }
 ];
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-const contenedor = document.getElementById("contenedorCd");
+const shopContent = document.getElementById("shopContent");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
-discos.forEach((disco) => {
-    const {id, nombre, precio, desc, img, cantidad} = disco;
-    contenedor.innerHTML += `
-    <div class="card" style="width: 18rem;">
-    <img src="${img}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${nombre}</h5>
-    <p class="card-text">Precio: $ ${precio}</p>
-    <p class="card-text">Descripcion: ${desc}</p>
-    <p class="card-text">Cantidad: ${cantidad}</p>
-    <button onclick="agregarProducto(${id})" class="btn btn-primary">Agregar al carrito</button>
-  </div>
-</div>
-    `
+productos.forEach((product) => {
+    let content = document.createElement("div");
+    content.className = "cardV";
+    content.innerHTML = `
+    <img src="${product.img}">
+    <h3>${product.nombre}</h3>
+    <p class="price">$ ${product.precio}</p>
+    `;
+    shopContent.append(content);
+
+    let comprar = document.createElement("button");
+    comprar.innerText = "comprar";
+    comprar.className = "comprar";
+
+    content.append(comprar);
+
+    comprar.addEventListener("click", () => {
+        
+        const repeat = carrito.some((repeatProduct) => repeatProduct.id === product.id);
+        if(repeat) {
+            carrito.map((prod) => {
+                if(prod.id === product.id){
+                    prod.cantidad++;
+                }
+            });
+        }else {
+        carrito.push({
+            id: product.id,
+            img: product.img,
+            nombre: product.nombre,
+            precio: product.precio,
+            cantidad: product.cantidad,
+        });
+        carritoCounter();
+        saveLocal();
+        }
+    });
 });
 
-function agregarProducto(id) {
-    const item = discos.find(disco => disco.id === id);
-    let itemAgregado = carrito.find(disco => disco.id === id);
-
-    if(itemAgregado) {
-        itemAgregado.cantidad++;
-    }else{
-        carrito.push(item);
-    }
-
-    verCarrito();
-    guardarLocalStorage();
+const saveLocal = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
 
-function verCarrito() {
-    const mostrar = document.getElementById("ventanita");
-    mostrar.innerHTML = "";
-    
-    carrito.forEach((p, index) => {
-        let producto = document.createElement('div');
-        producto.classList.add("card");
 
-        producto.innerHTML = `
-        <img class="card ventanita" src="${p.img}" alt="">
-        <h5>${p.nombre}</h5>
-        <p>${p.desc}</p>
-        <p>Precio: ${p.precio}</p>
-        <p>Cantidad: ${p.cantidad}</p>
-        <button id="${p.id}" class="btnEliminar">ELIMINAR</button>
-        `
-        const flecha = document.getElementById('flechaAbajo');
-        flecha.style.marginBottom = '0';
 
-        mostrar.appendChild(producto);
-        producto.querySelector('button').addEventListener('click', ()=> {
-            eliminarDelCarrito(index);
-        })
-    })
-}
 
-function eliminarDelCarrito(indice) {
-    carrito[indice].cantidad--;
 
-    if(carrito[indice].cantidad === 0) {
-        carrito.splice(indice, 1);
-        const flecha = document.getElementById('flechaAbajo');
-        flecha.style.marginBottom = '350px';
-    }
 
-    verCarrito();
-    guardarLocalStorage();
-}
 
-function guardarLocalStorage() {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-}
 
-function cargarCarritoLocalStorage() {
-    if(localStorage.getItem('carrito')!==null) {
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-    }else {
-        carrito = [];
-    }
-}
+
+
+
+
+
+

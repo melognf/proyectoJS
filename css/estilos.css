@@ -624,73 +624,213 @@ nav {
 /**********-- VENTA Y JUEGOS  --****************/
 /******************************************/
 
-.carrito {
+.nav-containerV {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+}
+
+.navbarV {
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: #1f1e1e;
+    margin-top: 2px;
+    padding: 15px;
+}
+
+.navbar-logo {
+    justify-self: start;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 35px;
+    margin-bottom: 0;
+    animation-name: tituloVenta;
+    animation-duration: 8s;
+}
+
+@keyframes tituloVenta {
+    0% {
+        margin-left: 20px;
+    }
+    50% {
+        margin-left: 500px;
+        color: #007fff;
+    }
+
+    100% {
+        margin-left: 20px;
+    }
+}
+
+.ver-carrito {
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    animation-name: carrito;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes carrito {
+    0% {
+        margin-right: 20px;
+    }
+    50% {
+        margin-right: 600px;
+    }
+
+    100% {
+        margin-right: 20px;
+    }
+}
+
+.shop-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.cardV {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-top: 20px;
+    background-color: #121212;
+}
+
+.cardV h3 {
+    color: #007fff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.cardV > img {
+    width: 90%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.price {
+    color: #fff;
+    font-size: 22px;
+}
+
+.cardV button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: #007fff;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.cardV button:hover {
+    opacity: 0.7;
+}
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
 }
 
-#contenedorCd {
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0a0909;
+    color: #007fff;
+    width: 100%;
+}
+
+.modal-header-title {
+    justify-self: start;
+    color: #fff;
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container > .modal-contentV {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+    background-color: #121212;
 }
 
-.ventaCd {
-    padding: 50px;
+.modal-container > div > img {
+    height: 120px;
+    width: 120px;
 }
 
-.card h5 {
-    color: #f4f4f2;
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
 }
 
-.card p {
-    color: #009fff;
-}
-.ventanita {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    height: auto;
-    border: 10px solid black;
+.delete-product {
+    cursor: pointer;
+    margin-bottom: 16px;
 }
 
-.ventanita img {
-    width: 25%;
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 6px;
+    top: 37px;
+    right: 46px;
+    position: absolute;
+    display: none;
 }
 
-.card .ventanita {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 50px;
+#cantidad-carrito span {
+    width: 50%;
+}
+.sumar {
+    cursor: pointer;
+    background-color: #007fff;
 }
 
-.btnEliminar {
-    background-color: #47a15b;
-    width: 220px;
-    height: 50px;
-    border: 2px solid white;
-    font-family: 'KoHo', sans-serif;
-    font-weight: bold;
+.restar {
+    cursor: pointer;
+    background-color: #007fff;
 }
 
-.combinado {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+.tit {
+    color: #007fff;
+    font-size: 16px;
 }
-
-.tituloCarrito h3 {
-    margin-right: 200px;
-}
-    
-.tituloCarrito img {
-    margin-bottom: 350px;
-}
-
-
-
-  
 
 
 /**********--  MULTIMEDIA  --**********/
@@ -1170,27 +1310,49 @@ textarea {
     /******************************************/
     
 
-    #dos_tecno .container .telef {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+
+@keyframes tituloVenta {
+    0% {
+        color: #fff;
     }
 
-    #dos_tecno .container .telef img {
-        width: 300px;
-        height: auto;
+    100% {
+        color: #007fff;
     }
+}
 
-    #tres_tecno iframe {
-        width: 100%;
-        margin-bottom: 50px;
-    }
+.ver-carrito {
+    animation-duration: 0s;
+}
 
-    #cuatro_tecno img {
-        align-self: center;
-    }
+.cardV {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal-container > .modal-contentV {
+    flex-direction: column;
+    width: 100%;
+}
+
+.modal-container > div > img {
+    padding: 20px;
+}
+
+.total-content {
+    padding: 40px;
+}
+
+.delete-product {
+    padding: 20px;
+}
+
+.tit {
+    padding: 20px;
+}
 
 
+    
 
     /**********--  MULTIMEDIA  --**********/
    /*************************************/
