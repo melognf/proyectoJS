@@ -702,6 +702,7 @@ nav {
     text-align: center;
     font-family: arial;
     margin-top: 20px;
+    margin-bottom: 20px;
     background-color: #121212;
 }
 
@@ -832,6 +833,93 @@ nav {
     font-size: 16px;
 }
 
+.shop-contentDos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 50%;
+    border: 2px solid #121212;
+}
+
+.cardVdos {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #121212;
+}
+
+.cardVdos h3 {
+    color: #007fff;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.cardVdos > img {
+    width: 70%;
+    height: 70%;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.descripcion {
+    font-size: 15px;
+    padding: 5px;
+    color: #47a15b;
+}
+
+.peliculas {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.pelivideo {
+    width: 300px;
+    height: 200px;
+}
+
+.cardVdos .tituloP {
+    font-size: 30px;
+}
+
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+}
+
+.pantalla img {
+    width: 800px;
+}
+
+.pantalla h4 {
+    font-size: 50px;
+    padding: 20px;
+}
+
+.pantalla h5 {
+    font-size: 40px;
+    padding: 20px;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.pantalla p {
+    font-size: 25px;
+    padding-top: 20px;
+}
+
+#nasa {
+    width: 200px;
+    margin-left: 500px;
+}
 
 /**********--  MULTIMEDIA  --**********/
 /***********************************/

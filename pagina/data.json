@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "nombre": "Batman",
+        "cantidad": 1,
+        "desc": "El caballero oscuro conocido como Batman defiende a la corrupta e insegura ciudad de Gotham de su enemigo principal, un payaso homicida conocido como Joker.",
+        "precio": 15000,
+        "img": "img/peli1.webp"
+    },
+     {
+        "id": 2,
+        "nombre": "Buenos muchachos",
+        "cantidad": 1,
+        "desc": "Henry, un niño de trece años de Brooklyn, vive fascinado con el mundo de los gángsters. Su sueño se hace realidad cuando entra en la familia Pauline.",
+        "precio": 16000,
+        "img": "img/peli2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Los cazafantasmas",
+        "cantidad": 1,
+        "desc": "Al quedarse en paro, tres doctores en parapsicología crean una empresa para limpiar Nueva York de ectoplasmas. Mítica comedia a cargo de Ivan Reitman.",
+        "precio": 18000,
+        "img": "img/peli3.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "Critters",
+        "cantidad": 1,
+        "desc": "La familia Brown emprende una incansable lucha contra una serie de letales carnívoros alienígenas que llega a su granja de Kansas. Parece una batalla perdida hasta que dos cazadores integalácticos aparecen en escena con el fin de exterminar a estas criaturas del planeta.",
+        "precio": 15000,
+        "img": "img/peli4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Duro de matar",
+        "cantidad": 1,
+        "desc": "Un grupo terrorista se apodera de un edificio de Los Ángeles y toma a un grupo de personas como rehenes. El policía de Nueva York John McClane consigue escapar del acoso terrorista. Aunque está solo y fuera de servicio, McClane decide enfrentarse a los secuestradores y se convierte en la única esperanza para los rehenes.",
+        "precio": 20000,
+        "img": "img/peli5.webp"
+    },
+    {
+        "id": 6,
+        "nombre": "E.T.",
+        "cantidad": 1,
+        "desc": "Un pequeño extraterrestre de otro planeta queda abandonado en la Tierra cuando su nave se olvida de él. Está completamente solo y asustado hasta que Elliott, un niño de nueve años, lo encuentra y decide esconderlo en su casa para protegerlo. El chico y sus hermanos intentarán encontrar la forma de devolver al extraterrestre a su planeta antes de que lo encuentren los científicos y la policía.",
+        "precio": 19000,
+        "img": "img/peli6.webp"
+    },
+    {
+        "id": 7,
+        "nombre": "Cobra",
+        "cantidad": 1,
+        "desc": "El teniente de policía Marion Cobretti 'Cobra', conocido por su dureza y eficacia, tiene la misión de proteger a la testigo de un asesinato, especialmente cuando un topo en el departamento de policía delate su escondite.",
+        "precio": 15000,
+        "img": "img/peli7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Matrix",
+        "cantidad": 1,
+        "desc": "El programador informático Thomas Anderson, más conocido en el mundo de los 'hacker' como Neo, está en el punto de mira del temible agente Smith. Otros dos piratas informáticos, Trinity y Morfeo, se ponen en contacto con Neo para ayudarlo a escapar. Matrix te posee. Sigue al conejo blanco.",
+        "precio": 16000,
+        "img": "img/peli8.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Rambo",
+        "cantidad": 1,
+        "desc": "El veterano John Rambo es liberado de la cárcel para que ayude en la búsqueda de prisioneros de guerra estadounidenses en el sureste de Asia.",
+        "precio": 17000,
+        "img": "img/peli9.jpg"
+    },
+    {
+        "id": 10,
+        "nombre": "Sexto sentido",
+        "cantidad": 1,
+        "desc": "Malcolm Crowe es un psicólogo infantil que vive obsesionado por el recuerdo de un joven al que fue incapaz de ayudar. Cuando conoce a Cole, un aterrorizado y confuso niño de ocho años, ve que se le presenta la oportunidad de redimirse haciendo todo lo posible para ayudarlo. Sin embargo, el doctor no está preparado para descubrir la terrible verdad sobre el chico: recibe visitas de espíritus atormentados que lo asustan.",
+        "precio": 18000,
+        "img": "img/peli10.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "Los sospechosos de siempre",
+        "cantidad": 1,
+        "desc": "Dave Kujan, un agente especial del servicio de aduanas de EE.UU, investiga las causas del incendio de un barco, en el puerto de San Pedro de Los Ángeles, que provocó 27 víctimas mortales. Su única fuente de información es Roger Kint, un estafador lisiado que sobrevivió al incendio.",
+        "precio": 19000,
+        "img": "img/peli11.jpg"
+    },
+    {
+        "id": 12,
+        "nombre": "Terminator",
+        "cantidad": 1,
+        "desc": "En el año 2029 las máquinas dominan el mundo. Los rebeldes que luchan contra ellas tienen como líder a John Connor, un hombre que nació en los años ochenta. Para eliminarlo y así acabar con la rebelión, las máquinas envían al pasado el robot Terminator con la misión de matar a Sarah Connor, la madre de John, e impedir así su nacimiento. Sin embargo, un hombre del futuro intentará protegerla.",
+        "precio": 20000,
+        "img": "img/peli12.jpg"
+    }
+]
