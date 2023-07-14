@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/estilos.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>No hace mucho - venta y juegos</title>
     <link rel="shortcut icon" href="../multimedia/favicon.ico" type="image/x-icon">
 </head>
@@ -66,10 +67,19 @@
 
     <div class="peliculas">
       <div id="shopContentDos" class="shop-contentDos"></div>
+
       <div id="pantalla" class="pantalla">
+
         <img id="nasa" src="img/nasa.jpg" alt="">
+        
+        <div class="nasaDos">
+          <p>Cada día, todos los días, una noticia diferente para que te mantengas informado de lo que está pasando en el espacio</p>
+          <img src="./img/nasaDos.webp" alt="">
+
+        </div>
       </div>
     </div>
+    
     <div id="modal-container" class="modal-container"></div>
     
      
@@ -102,7 +112,10 @@
           <p class="copy">© 2022 No hace Mucho, todos los derechos reservados.</p>
       </div>
   </footer>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();

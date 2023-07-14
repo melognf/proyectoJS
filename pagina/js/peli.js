@@ -9,7 +9,7 @@ const obtenerPelis = async () => {
         let content = document.createElement("div");
         content.className = "cardVdos";
         content.innerHTML = `
-        <img src="${pelis.img}">
+        <img class="imgPelis" src="${pelis.img}">
         <h3 class="tituloP">${pelis.nombre}</h3>
         <p class="descripcion"> ${pelis.desc}</p>
         `;
